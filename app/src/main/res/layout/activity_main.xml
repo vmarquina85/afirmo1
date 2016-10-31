@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#255D5A"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:text="@string/sprint_1_0_creado_por"
+        android:textColor="#adc8bc"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/g6_is2"
+        android:textColor="#adc8bc"
+        android:textIsSelectable="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="30dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:contentDescription="@string/nameLogo"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10sp"
+        android:text="@string/AppName"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#adc8bc"
+        android:textSize="40sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/buttonUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/buttonUsuarioAfirmo"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:backgroundTint="@color/colorPrimary" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/google"
+        android:layout_height="66dp"
+        android:text="@string/usuario_google"
+        android:id="@+id/buttonGoogle"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:nestedScrollingEnabled="false"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:backgroundTint="#ffffff" />
+
+    <Button
+        android:id="@+id/buttonCamara"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/uso_de_c_mara"
+        android:drawableLeft="@drawable/camera"
+        android:backgroundTint="#ffffff"
+        android:paddingRight="60dp"
+        android:paddingLeft="60dp" />
+
+    <Button
+        android:id="@+id/buttonRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="@string/registrarse"
+        android:textColor="#ffffff"
+        android:backgroundTint="@color/colorPrimary" />
+
+
+</LinearLayout>
