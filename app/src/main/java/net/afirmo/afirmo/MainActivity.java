@@ -15,18 +15,20 @@ import android.widget.ImageView;
 
 import java.io.File;
 
-public class MainActivity extends ActionBarActivity {
-    Button button;
-    ImageView imageView;
+public class MainActivity extends AppCompatActivity {
+    Button camara;
+    Button btn_login;
     static final int CAM_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = (Button) findViewById(R.id.buttonCamara);
+        camara = (Button) findViewById(R.id.buttonCamara);
+        btn_login= (Button) findViewById(R.id.buttonUsuario) ;
 
-        button.setOnClickListener(new View.OnClickListener() {
+
+        camara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -35,6 +37,17 @@ public class MainActivity extends ActionBarActivity {
                 startActivityForResult(camera_intent,CAM_REQUEST);
             }
         });
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              Intent btn_login = new Intent(MainActivity.this,LoginAfirmo.class);
+               startActivity(btn_login);
+            }
+        });
+
+
+
 
 
     }
@@ -47,11 +60,5 @@ public class MainActivity extends ActionBarActivity {
         File image_file = new File(folder, "cam_image.jpg");
         return image_file;
 
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-       String path="sdcard/afirmo_app/cam_image.jpg";
-        imageView.setImageDrawable(Drawable.createFromPath(path));
     }
 }

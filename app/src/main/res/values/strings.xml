@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Afirmo</string>
-  <string name="victor">Victor Marquina</string>
+    <string name="victor">Victor Marquina</string>
     <string name="cadena">Ingresa algo</string>
     <string name="g6_is2">G6 IS2</string>
     <string name="sprint_1_0_creado_por">Sprint 1.0 Creado por</string>
     <string name="nameLogo">Logo</string>
     <string name="AppName">Afirmo</string>
-  <string name="buttonUsuarioAfirmo">Usuario Afirmo</string>
-  <string name="usuario_google">Usuario Google</string>
-  <string name="uso_de_c_mara">Uso de Cámara</string>
-  <string name="registrarse">Registrarse</string>
+    <string name="buttonUsuarioAfirmo">Usuario Afirmo</string>
+    <string name="usuario_google">Usuario Google</string>
+    <string name="uso_de_c_mara">Uso de Cámara</string>
+    <string name="registrarse">Registrarse</string>
 
 </resources>
