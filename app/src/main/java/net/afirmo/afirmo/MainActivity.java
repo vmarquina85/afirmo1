@@ -16,19 +16,21 @@ import android.widget.ImageView;
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
-    Button camara;
+    Button btn_camara;
     Button btn_login;
+    Button btn_registrar;
+
     static final int CAM_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        camara = (Button) findViewById(R.id.buttonCamara);
+        btn_camara = (Button) findViewById(R.id.buttonCamara);
         btn_login= (Button) findViewById(R.id.buttonUsuario) ;
+        btn_registrar= (Button) findViewById(R.id.buttonRegistrarse) ;
 
-
-        camara.setOnClickListener(new View.OnClickListener() {
+        btn_camara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -45,7 +47,13 @@ public class MainActivity extends AppCompatActivity {
                startActivity(btn_login);
             }
         });
-
+        btn_registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btn_registrar = new Intent(MainActivity.this,registrarUser.class);
+                startActivity(btn_registrar);
+            }
+        });
 
 
 

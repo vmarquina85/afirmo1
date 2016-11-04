@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginAfirmo"></activity>
+        <activity android:name=".LoginAfirmo" />
+        <activity android:name=".registrarUser" />
+        <activity android:name=".MainMenu"></activity>
     </application>
 
 </manifest>
