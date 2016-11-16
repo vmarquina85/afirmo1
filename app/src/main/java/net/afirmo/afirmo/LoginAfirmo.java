@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class LoginAfirmo extends AppCompatActivity {
     Button signIn;
-String tipo;
+    String tipo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

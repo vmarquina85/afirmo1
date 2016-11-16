@@ -55,7 +55,7 @@
 
     <Button
         android:id="@+id/buttonUsuario"
-        android:layout_width="match_parent"
+        android:layout_width="247dp"
         android:layout_height="66dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/buttonUsuarioAfirmo"
@@ -63,7 +63,7 @@
         android:textAlignment="center"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
-        android:backgroundTint="@color/colorPrimary" />
+        android:backgroundTint="@color/colorPrimary" /><![CDATA[
 
     Button
         android:layout_width="match_parent"
@@ -79,21 +79,12 @@
         android:paddingRight="60dp"
         android:backgroundTint="#ffffff" />
 
-    <Button
-        android:id="@+id/buttonCamara"
-        android:layout_width="match_parent"
-        android:layout_height="66dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/uso_de_c_mara"
-        android:drawableLeft="@drawable/camera"
-        android:backgroundTint="#ffffff"
-        android:paddingRight="60dp"
-        android:paddingLeft="60dp" />
+    ]]>
 
     <Button
         android:id="@+id/buttonRegistrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="66dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp"
         android:text="@string/registrarse"

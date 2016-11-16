@@ -14,18 +14,18 @@ public class afirmoAdapter implements connectInterface {
     public void conectar(String BDnombre, String usuario, String pass) throws SQLException, ClassNotFoundException{
         String cadena = "jdbc:postgresql://192.168.1.4:5432/" + BDnombre;
 
-            Class.forName("org.postgresql.Driver");
-              connect = DriverManager.getConnection(cadena,usuario,pass);
+        Class.forName("org.postgresql.Driver");
+        connect = DriverManager.getConnection(cadena,usuario,pass);
 
     }
 
     @Override
     public String ejecutar(String sql)throws SQLException   {
         java.sql.Statement st =connect.createStatement();
-      String consulta=sql;
-             ResultSet result = st.executeQuery(consulta);
-            String usuario= result.getString("usr_login");
-            return usuario;
+        String consulta=sql;
+        ResultSet result = st.executeQuery(consulta);
+        String usuario= result.getString("usr_login");
+        return usuario;
 
 
 
