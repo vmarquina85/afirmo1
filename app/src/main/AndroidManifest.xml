@@ -3,7 +3,6 @@
     package="net.afirmo.afirmo">
 
     <uses-feature android:name="android.hardware.camera2" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -23,5 +22,5 @@
         <activity android:name=".registrarUser" />
         <activity android:name=".MainMenu"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

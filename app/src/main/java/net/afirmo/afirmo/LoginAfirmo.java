@@ -1,7 +1,7 @@
 package net.afirmo.afirmo;
 
 import android.app.AlertDialog;
-import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,12 +13,12 @@ import java.sql.SQLException;
 
 public class LoginAfirmo extends AppCompatActivity {
     Button signIn;
-    String tipo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_afirmo);
         signIn = (Button) findViewById(R.id.buttonIngresar);
+
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,16 +30,22 @@ public class LoginAfirmo extends AppCompatActivity {
 
 
                 try {
-                    adapter.conectar("sicop", "postgres", "humanidad");
+                    adapter.conectar("sicop", "webserver", "12345");
                     AlertDialog.Builder dialogOk = new AlertDialog.Builder(LoginAfirmo.this);
                     dialogOk.setTitle("Mensaje Afirmo");
                     Respuesta=adapter.ejecutar("Select usr_login from usuarios where usr_login='MARLON.FALLA'");
                     dialogOk.setMessage(Respuesta);
                     dialogOk.show();
-                } catch (ClassNotFoundException | SQLException e) {
+                } catch (ClassNotFoundException e) {
 
                     AlertDialog.Builder dialogError = new AlertDialog.Builder(LoginAfirmo.this);
-                    dialogError.setTitle("Error Afirmo");
+                    dialogError.setTitle("CE Afirmo");
+                    dialogError.setMessage(e.getMessage());
+                    dialogError.show();
+                } catch (SQLException e) {
+
+                    AlertDialog.Builder dialogError = new AlertDialog.Builder(LoginAfirmo.this);
+                    dialogError.setTitle("SQLE Afirmo");
                     dialogError.setMessage(e.getMessage());
                     dialogError.show();
                 }
@@ -48,4 +54,5 @@ public class LoginAfirmo extends AppCompatActivity {
 
         });
     }
+
 }
