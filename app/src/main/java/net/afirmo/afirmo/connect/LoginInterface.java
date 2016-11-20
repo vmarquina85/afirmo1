@@ -7,7 +7,7 @@ import net.afirmo.afirmo.registrarUser;
  */
 public interface LoginInterface {
     public void signIn(String email, String password);
-    public void registrar(String email, String password,registrarUser Contexto);
+    public void registrar(String email, String password);
 
 }
 

@@ -23,23 +23,9 @@ public class firebaseAdapter implements LoginInterface {
     }
 
     @Override
-    public void registrar(String email, String password,  registrarUser contexto) {
-         registrarUser activity = contexto;
-        ProgressDialog progressDialog = new ProgressDialog(contexto);
-        FirebaseAuth firebaseAuth;
-        firebaseAuth = FirebaseAuth.getInstance();
+    public void registrar(String email, String password) {
 
 
-        if (TextUtils.isEmpty(email)) {
-            Toast.makeText(contexto, "Por favor ingresar Email", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(password)) {
-            Toast.makeText(contexto, "Por favor ingresar Password", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        progressDialog.setMessage("Registrando Usuario...");
-        progressDialog.show();
 
     }
 }
