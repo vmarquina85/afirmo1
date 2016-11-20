@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import net.afirmo.afirmo.connect.afirmoAdapter;
+import net.afirmo.afirmo.connect.postgresqlAdapter;
 
 import java.sql.SQLException;
 
@@ -25,10 +25,10 @@ public class LoginAfirmo extends AppCompatActivity {
             public void onClick(View v) {
                 //  Intent button = new Intent(LoginAfirmo.this, MainMenu.class);
                 // startActivity(button);
-                afirmoAdapter adapter = new afirmoAdapter();
+                postgresqlAdapter adapter = new postgresqlAdapter();
                 String Respuesta;
 
-
+/*
                 try {
                     adapter.conectar("sicop", "webserver", "12345");
                     AlertDialog.Builder dialogOk = new AlertDialog.Builder(LoginAfirmo.this);
@@ -49,7 +49,7 @@ public class LoginAfirmo extends AppCompatActivity {
                     dialogError.setMessage(e.getMessage());
                     dialogError.show();
                 }
-
+*/
             }
 
         });

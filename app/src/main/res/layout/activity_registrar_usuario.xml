@@ -29,7 +29,8 @@
         android:contextClickable="true"
         android:hint="Nombre Completo"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:paddingRight="10dp"
+        android:singleLine="true" />
 
     <EditText
         android:layout_width="match_parent"
@@ -40,18 +41,8 @@
         android:background="#ffffff"
         android:hint="Empresa"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/editText5"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="10dp"
-        android:background="#ffffff"
-        android:hint="Email"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:paddingRight="10dp"
+        android:singleLine="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,32 +56,25 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/editText6"
+        android:id="@+id/editEmail"
         android:layout_marginBottom="10dp"
         android:background="#ffffff"
-        android:hint="Usuario"
+        android:hint="Escriba su Email"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:paddingRight="10dp"
+        android:singleLine="true" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/editText7"
+        android:id="@+id/editPassword"
         android:layout_marginBottom="10dp"
         android:background="#ffffff"
         android:hint="Contraseña"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/editText8"
-        android:layout_marginBottom="10dp"
-        android:background="#ffffff"
-        android:hint="Repetir Contraseña"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:paddingRight="10dp"
+        android:password="true"
+        android:singleLine="true" />
 
     <Button
         android:layout_width="match_parent"

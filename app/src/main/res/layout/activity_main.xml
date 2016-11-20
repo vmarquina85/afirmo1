@@ -55,7 +55,7 @@
 
     <Button
         android:id="@+id/buttonUsuario"
-        android:layout_width="247dp"
+        android:layout_width="match_parent"
         android:layout_height="66dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/buttonUsuarioAfirmo"
@@ -83,7 +83,7 @@
 
     <Button
         android:id="@+id/buttonRegistrarse"
-        android:layout_width="247dp"
+        android:layout_width="match_parent"
         android:layout_height="66dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp"

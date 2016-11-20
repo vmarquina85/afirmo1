@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "34377459810",
+    "firebase_url": "https://afirmo-436cd.firebaseio.com",
+    "project_id": "afirmo-436cd",
+    "storage_bucket": "afirmo-436cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34377459810:android:0fff205a8c797a41",
+        "android_client_info": {
+          "package_name": "net.afirmo.afirmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34377459810-ciob2gt2cjok8dotft3svtngki0i81ml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgMoLLX9PT2qIDqGtL06LqHOvQ_stm8PY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

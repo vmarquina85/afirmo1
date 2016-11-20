@@ -8,7 +8,7 @@ import java.sql.SQLException;
 /**
  * Created by vic2_ on 16/11/2016.
  */
-public class afirmoAdapter implements connectInterface {
+public class postgresqlAdapter implements connectInterface {
     Connection connect;
     @Override
     public void conectar(String BDnombre, String usuario, String pass) throws SQLException, ClassNotFoundException{
