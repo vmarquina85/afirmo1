@@ -16,34 +16,35 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import net.afirmo.afirmo.connect.firebaseAdapter;
 
 
 public class registrarUser extends AppCompatActivity {
 
-    Button registrar;
-    EditText email;
-    EditText password;
+    private Button registrar;
+    private EditText email, password, nombre, empresa;
 
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_usuario);
-
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
         registrar = (Button) findViewById(R.id.btn_registrar);
         email = (EditText) findViewById(R.id.editEmail);
         password = (EditText) findViewById(R.id.editPassword);
+        nombre = (EditText) findViewById(R.id.etNombre);
+        empresa = (EditText) findViewById(R.id.etEmpresa);
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registerUser();
+
+                registrarUsuario();
 
             }
         });
@@ -51,27 +52,37 @@ public class registrarUser extends AppCompatActivity {
 
     }
 
-    public void registerUser() {
+    public void registrarUsuario() {
         String strEmail = email.getText().toString().trim();
         String strPassword = password.getText().toString().trim();
+        String strNombre = nombre.getText().toString().trim();
+        String strEmpresa = empresa.getText().toString().trim();
+        if (TextUtils.isEmpty(strNombre)) {
+            Toast.makeText(this, "Por favor ingresar su Nombre", Toast.LENGTH_SHORT).show();
+            nombre.requestFocus();
+            return;
+        }
         if (TextUtils.isEmpty(strEmail)) {
             Toast.makeText(this, "Por favor ingresar Email", Toast.LENGTH_SHORT).show();
+            email.requestFocus();
             return;
         }
         if (TextUtils.isEmpty(strPassword)) {
             Toast.makeText(this, "Por favor ingresar Password", Toast.LENGTH_SHORT).show();
+            password.requestFocus();
             return;
         }
-        progressDialog.setMessage("Registrando Usuario...");
-        progressDialog.show();
 
+
+        progressDialog.setMessage("Registrando User...");
+        progressDialog.show();
         firebaseAuth.createUserWithEmailAndPassword(strEmail, strPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     progressDialog.dismiss();
                     Toast.makeText(registrarUser.this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
-                    Intent btn_login = new Intent(registrarUser.this,LoginAfirmo.class);
+                    Intent btn_login = new Intent(registrarUser.this, LoginAfirmo.class);
                     finish();
                     startActivity(btn_login);
 
@@ -83,6 +94,9 @@ public class registrarUser extends AppCompatActivity {
         });
 
     }
+
+
+
 
 }
 

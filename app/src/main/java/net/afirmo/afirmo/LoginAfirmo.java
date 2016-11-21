@@ -49,10 +49,12 @@ public class LoginAfirmo extends AppCompatActivity {
         String strPassword = password.getText().toString().trim();
         if (TextUtils.isEmpty(strEmail)) {
             Toast.makeText(this, "Por favor ingresar Email", Toast.LENGTH_SHORT).show();
+            email.requestFocus();
             return;
         }
         if (TextUtils.isEmpty(strPassword)) {
             Toast.makeText(this, "Por favor ingresar Password", Toast.LENGTH_SHORT).show();
+            password.requestFocus();
             return;
         }
         progressDialog.setMessage("Registrando Usuario...");

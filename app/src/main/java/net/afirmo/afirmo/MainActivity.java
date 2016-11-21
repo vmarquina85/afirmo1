@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent btn_login = new Intent(MainActivity.this, LoginAfirmo.class);
-                finish();
+
                 startActivity(btn_login);
             }
         });
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent btn_registrar = new Intent(MainActivity.this, registrarUser.class);
-                finish();
+
                 startActivity(btn_registrar);
             }
         });
