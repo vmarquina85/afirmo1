@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import net.afirmo.afirmo.ActivityCode.MainMenu;
+
 
 public class LoginAfirmo extends AppCompatActivity {
     EditText email;
@@ -57,7 +59,7 @@ public class LoginAfirmo extends AppCompatActivity {
             password.requestFocus();
             return;
         }
-        progressDialog.setMessage("Registrando Usuario...");
+        progressDialog.setMessage("Logueando...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(strEmail, strPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -65,7 +67,7 @@ public class LoginAfirmo extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     progressDialog.dismiss();
-                    Intent btn_login = new Intent(LoginAfirmo.this, MainMenu.class);
+                    Intent btn_login = new Intent(LoginAfirmo.this, Afirmo.class);
                     finish();
                     startActivity(btn_login);
 

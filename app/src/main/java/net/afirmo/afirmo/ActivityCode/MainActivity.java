@@ -1,4 +1,4 @@
-package net.afirmo.afirmo;
+package net.afirmo.afirmo.ActivityCode;
 
 
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import net.afirmo.afirmo.LoginAfirmo;
+import net.afirmo.afirmo.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btn_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent btn_registrar = new Intent(MainActivity.this, registrarUser.class);
+                Intent btn_registrar = new Intent(MainActivity.this, RegistrarUser.class);
 
                 startActivity(btn_registrar);
             }

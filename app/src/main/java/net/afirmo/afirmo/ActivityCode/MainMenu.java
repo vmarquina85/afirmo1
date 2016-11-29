@@ -1,4 +1,4 @@
-package net.afirmo.afirmo;
+package net.afirmo.afirmo.ActivityCode;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,6 +14,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import net.afirmo.afirmo.LoginAfirmo;
+import net.afirmo.afirmo.R;
 
 import java.io.File;
 
@@ -45,6 +48,7 @@ public class MainMenu extends AppCompatActivity {
         }
         databaseReference = FirebaseDatabase.getInstance().getReference();
         FirebaseUser user = firebaseAuth.getCurrentUser();
+
         textViewUser.setText("Bienvenido " + user.getEmail());
 
         btn_registrarFirma.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +59,7 @@ public class MainMenu extends AppCompatActivity {
 
                 camera_intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
                 startActivityForResult(camera_intent, CAM_REQUEST);
-                Toast.makeText(MainMenu.this, "Firma Registrada con Exito", Toast.LENGTH_SHORT).show();
+
             }
         });
         verificar.setOnClickListener(new View.OnClickListener() {

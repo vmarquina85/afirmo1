@@ -1,4 +1,4 @@
-package net.afirmo.afirmo;
+package net.afirmo.afirmo.ActivityCode;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -16,9 +16,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import net.afirmo.afirmo.LoginAfirmo;
+import net.afirmo.afirmo.R;
 
 
-public class registrarUser extends AppCompatActivity {
+public class RegistrarUser extends AppCompatActivity {
 
     private Button registrar;
     private EditText email, password, nombre, empresa;
@@ -81,14 +83,14 @@ public class registrarUser extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     progressDialog.dismiss();
-                    Toast.makeText(registrarUser.this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
-                    Intent btn_login = new Intent(registrarUser.this, LoginAfirmo.class);
+                    Toast.makeText(RegistrarUser.this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                    Intent btn_login = new Intent(RegistrarUser.this, LoginAfirmo.class);
                     finish();
                     startActivity(btn_login);
 
                 } else {
                     progressDialog.dismiss();
-                    Toast.makeText(registrarUser.this, "Usuario no pudo Registrarse.. por favor Intentelo de nuevo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrarUser.this, "Usuario no pudo Registrarse.. por favor Intentelo de nuevo", Toast.LENGTH_SHORT).show();
                 }
             }
         });
