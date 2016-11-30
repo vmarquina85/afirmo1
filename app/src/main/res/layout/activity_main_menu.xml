@@ -35,7 +35,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:text="Agregar Registro de Firma"
+        android:text="Crear Patron"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="#ffff"
         android:id="@+id/btn_firma"
@@ -53,7 +53,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:text="HIstorial de Verificaciones"
+        android:text="Historial"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="#ffff"
         android:id="@+id/btnHistorial"

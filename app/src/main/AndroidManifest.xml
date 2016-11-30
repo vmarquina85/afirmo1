@@ -3,18 +3,20 @@
     package="net.afirmo.afirmo">
 
     <uses-feature android:name="android.hardware.camera2" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-
         android:theme="@style/AppTheme.FullScreen">
         <activity
             android:name=".ActivitiesJava.MainActivity"
-            android:theme="@style/AppTheme.FullScreen">
+            android:theme="@style/AppTheme.FullScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,13 +25,21 @@
         </activity>
         <activity
             android:name=".LoginAfirmo"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="INICIA SESSIÓN EN AFIRMO"/>
         <activity
             android:name=".ActivitiesJava.registrarUser"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="REGÍSTRATE EN AFIRMO"/>
         <activity
             android:name=".ActivitiesJava.MainMenu"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".patron"
+            android:label="CREAR PATRON"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

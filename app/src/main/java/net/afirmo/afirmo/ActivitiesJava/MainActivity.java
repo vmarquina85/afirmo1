@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     TextView Login;
     Button btn_registrar;
     LinearLayout Mainlayout;
-    private static final int DURACION=300;
-    private static final int TIEMPO_DESPUES=300;
+    private static final int DURACION=500;
+    private static final int TIEMPO_DESPUES=500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent btn_login = new Intent(MainActivity.this, LoginAfirmo.class);
 
                 startActivity(btn_login);
-                setTitle("Iniciar sesión en Afirmo");
+
             }
         });
         btn_registrar.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent btn_registrar = new Intent(MainActivity.this, registrarUser.class);
 
                 startActivity(btn_registrar);
-                setTitle("Regístrate en Afirmo");
+
             }
         });
 
