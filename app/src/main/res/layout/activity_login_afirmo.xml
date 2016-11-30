@@ -10,34 +10,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="net.afirmo.afirmo.LoginAfirmo">
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="5dp"
-        android:text="@string/sprint_1_0_creado_por"
-        android:textColor="#adc8bc"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/g6_is2"
-        android:textColor="#adc8bc"
-        android:textIsSelectable="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:paddingBottom="30dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:contentDescription="@string/nameLogo"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -49,7 +29,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#adc8bc"
         android:textSize="40sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:layout_marginBottom="30dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -57,14 +38,14 @@
         android:id="@+id/etEmail"
         android:layout_gravity="center_horizontal"
         android:hint="Ingresar Email"
-        android:textColorHint="#82948c"
         android:layout_marginBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:typeface="sans"
         android:textIsSelectable="false"
         android:singleLine="true"
-        android:background="#ffffff" />
+        android:textColor="@color/titleColor"
+        android:textColorHint="@color/hintColor" />
 
     <EditText
         android:layout_width="match_parent"
@@ -72,13 +53,13 @@
         android:id="@+id/etPassword"
         android:layout_gravity="center_horizontal"
         android:hint="Contraseña"
-        android:textColorHint="#82948c"
+        android:textColorHint="@color/hintColor"
         android:inputType="textPassword"
         android:layout_marginBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:typeface="sans"
-        android:background="#ffffff" />
+        android:textColor="@color/titleColor" />
 
     <Button
         android:layout_width="match_parent"
@@ -91,14 +72,16 @@
         android:textAlignment="center"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
-        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="no tienes una cuenta? Registrate"
-        android:id="@+id/textView6"
+        android:text="¿No tienes una cuenta? Registrate"
+        android:id="@+id/tvRegistrar"
+        android:autoLink="web"
+        android:textColor="@color/titleColor"
         android:layout_gravity="center_horizontal"
-        android:textColor="#adc8bc" />
+        android:linksClickable="true" />
+
 </LinearLayout>

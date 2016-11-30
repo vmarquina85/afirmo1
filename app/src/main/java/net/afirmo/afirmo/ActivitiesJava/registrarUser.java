@@ -1,4 +1,4 @@
-package net.afirmo.afirmo;
+package net.afirmo.afirmo.ActivitiesJava;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,13 +17,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import net.afirmo.afirmo.LoginAfirmo;
+import net.afirmo.afirmo.R;
 
 
 public class registrarUser extends AppCompatActivity {
 
     private Button registrar;
     private EditText email, password, nombre, empresa;
-
+    private TextView iniciarSesion;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
@@ -39,6 +42,7 @@ public class registrarUser extends AppCompatActivity {
         password = (EditText) findViewById(R.id.editPassword);
         nombre = (EditText) findViewById(R.id.etNombre);
         empresa = (EditText) findViewById(R.id.etEmpresa);
+        iniciarSesion= (TextView) findViewById(R.id.tvIniciarSesion);
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +52,16 @@ public class registrarUser extends AppCompatActivity {
 
             }
         });
+        iniciarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent btn_login = new Intent(registrarUser.this, LoginAfirmo.class);
+                finish();
+                startActivity(btn_login);
+
+            }
+        });
 
     }
 
