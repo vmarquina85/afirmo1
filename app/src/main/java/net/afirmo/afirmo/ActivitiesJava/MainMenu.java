@@ -1,4 +1,4 @@
-package net.afirmo.afirmo;
+package net.afirmo.afirmo.ActivitiesJava;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +15,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import net.afirmo.afirmo.LoginAfirmo;
+import net.afirmo.afirmo.R;
+
 import java.io.File;
 
 public class MainMenu extends AppCompatActivity {
@@ -29,6 +32,7 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
         btn_registrarFirma = (Button) findViewById(R.id.btn_firma);
         logout = (Button) findViewById(R.id.btnLogout);
         verificar = (Button) findViewById(R.id.btnVerirficar);
@@ -45,7 +49,7 @@ public class MainMenu extends AppCompatActivity {
         }
         databaseReference = FirebaseDatabase.getInstance().getReference();
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        textViewUser.setText("Bienvenido " + user.getEmail());
+        textViewUser.setText(user.getDisplayName());
 
         btn_registrarFirma.setOnClickListener(new View.OnClickListener() {
             @Override

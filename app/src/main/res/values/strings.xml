@@ -6,9 +6,9 @@
     <string name="sprint_1_0_creado_por">Sprint 1.0 Creado por</string>
     <string name="nameLogo">Logo</string>
     <string name="AppName">Afirmo</string>
-    <string name="buttonUsuarioAfirmo">Usuario Afirmo</string>
+    <string name="buttonUsuarioAfirmo">Loguearse en Sistema</string>
     <string name="usuario_google">Usuario Google</string>
     <string name="uso_de_c_mara">Uso de Cámara</string>
-    <string name="registrarse">Registrarse</string>
+    <string name="registrarse">REGÍSTRATE</string>
 
 </resources>

@@ -9,13 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="net.afirmo.afirmo.MainMenu">
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:contentDescription="@string/nameLogo"
-        android:src="@drawable/logo" />
+    tools:context=".ActivitiesJava.MainMenu">
 
     <TextView
         android:id="@+id/textView3"
@@ -23,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="10sp"
-        android:text="@string/AppName"
+        android:text="Bienvenido!"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#adc8bc"
         android:textSize="40sp"
@@ -59,20 +53,19 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:text="Valorizar"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="#ffff"
-        android:id="@+id/btnValorizar"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="66dp"
         android:text="HIstorial de Verificaciones"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="#ffff"
         android:id="@+id/btnHistorial"
         android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:text="Valorizar"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#ffff"
+        android:id="@+id/btnValorizar" />
 
     <Button
         android:layout_width="wrap_content"

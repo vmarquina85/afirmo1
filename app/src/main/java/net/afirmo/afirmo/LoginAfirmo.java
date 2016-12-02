@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,11 +17,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import net.afirmo.afirmo.ActivitiesJava.MainMenu;
+import net.afirmo.afirmo.ActivitiesJava.registrarUser;
+
+
+
+
 
 public class LoginAfirmo extends AppCompatActivity {
-    EditText email;
-    EditText password;
+    EditText email,password;
     Button signIn;
+    TextView register;
 
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
@@ -32,6 +39,7 @@ public class LoginAfirmo extends AppCompatActivity {
         signIn = (Button) findViewById(R.id.buttonIngresar);
         email = (EditText) findViewById(R.id.etEmail);
         password = (EditText) findViewById(R.id.etPassword);
+        register =(TextView) findViewById(R.id.tvRegistrar);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -42,6 +50,16 @@ public class LoginAfirmo extends AppCompatActivity {
             }
 
         });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goRegistrar = new Intent(LoginAfirmo.this, registrarUser.class);
+                finish();
+                startActivity(goRegistrar);
+                setTitle("Regístrate en Afirmo");
+            }
+        });
+
     }
 
     private void LoguearUsuario() {
@@ -57,7 +75,7 @@ public class LoginAfirmo extends AppCompatActivity {
             password.requestFocus();
             return;
         }
-        progressDialog.setMessage("Registrando Usuario...");
+        progressDialog.setMessage("Iniciando sesión, por favor espere un momento...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(strEmail, strPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -68,6 +86,7 @@ public class LoginAfirmo extends AppCompatActivity {
                     Intent btn_login = new Intent(LoginAfirmo.this, MainMenu.class);
                     finish();
                     startActivity(btn_login);
+                    setTitle("Menú Principal");
 
                 } else {
                     progressDialog.dismiss();

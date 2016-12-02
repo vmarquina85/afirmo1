@@ -9,87 +9,72 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity"
+    tools:context=".ActivitiesJava.MainActivity"
     android:weightSum="1">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="5dp"
-        android:text="@string/sprint_1_0_creado_por"
-        android:textColor="#adc8bc"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/g6_is2"
-        android:textColor="#adc8bc"
-        android:textIsSelectable="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:paddingBottom="30dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:contentDescription="@string/nameLogo"
-        android:src="@drawable/logo" />
+        android:layout_height="match_parent"
+        android:id="@+id/Llmain">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="10sp"
-        android:text="@string/AppName"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#adc8bc"
-        android:textSize="40sp"
-        android:textStyle="bold|italic" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:contentDescription="@string/nameLogo"
+            android:src="@drawable/logo"
+            android:layout_marginTop="80dp" />
 
-    <Button
-        android:id="@+id/buttonUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="66dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/buttonUsuarioAfirmo"
-        android:textColor="#ffffff"
-        android:textAlignment="center"
-        android:paddingLeft="60dp"
-        android:paddingRight="60dp"
-        android:backgroundTint="@color/colorPrimary" /><![CDATA[
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10sp"
+            android:text="@string/AppName"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#adc8bc"
+            android:textSize="60sp"
+            android:textStyle="bold|italic"
+            android:layout_marginBottom="100dp" />
 
-    Button
-        android:layout_width="match_parent"
-        android:drawablePadding="8dp"
-        android:drawableLeft="@drawable/google"
-        android:layout_height="66dp"
-        android:text="@string/usuario_google"
-        android:id="@+id/buttonGoogle"
-        android:layout_gravity="center_horizontal"
-        android:textAlignment="center"
-        android:nestedScrollingEnabled="false"
-        android:paddingLeft="60dp"
-        android:paddingRight="60dp"
-        android:backgroundTint="#ffffff" />
+        <Button
+            android:id="@+id/buttonRegistrarse"
+            android:layout_width="300dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/registrarse"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginBottom="10dp" />
 
-    ]]>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="261dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:gravity="center">
 
-    <Button
-        android:id="@+id/buttonRegistrarse"
-        android:layout_width="match_parent"
-        android:layout_height="66dp"
-        android:layout_gravity="center_horizontal"
-        android:padding="20dp"
-        android:text="@string/registrarse"
-        android:textColor="#ffffff"
-        android:backgroundTint="@color/colorPrimary" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Ya tienes una cuenta?   "
+                android:id="@+id/textView6"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/titleColor" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iniciar Sesión"
+                android:id="@+id/linkLogin"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorAccent" />
 
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
